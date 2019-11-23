@@ -1,4 +1,12 @@
-Read-me R-code 
+---
+title: "Read-me Large t-VAR"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
 
 Barbaglia, Croux, Wilms (2019) "Volatility Spillovers and Heavy Tails: A Large t-Vector AutoRegressive Approach", Energy Economics.
 https://www.sciencedirect.com/science/article/pii/S0140988319303500?via%3Dihub
@@ -6,10 +14,10 @@ https://www.sciencedirect.com/science/article/pii/S0140988319303500?via%3Dihub
 This file contains a brief illustration of the code in order to implement the t-Lasso estimator, carry on the volatility spillover analysis and plot the volatility spillover network.
 
 Authors: Luca Barbaglia, Christophe Croux, Ines Wilms
-Contact: Mail: luca.barbgalia@ec.europa.eu
 Website: https://lucabarbaglia.github.io/
 
 
+```{r pressure, echo=FALSE}
 ###############
 # PRELIMINARY #
 ###############
@@ -64,3 +72,9 @@ vs$spill_index 		# volatility spillover index
 
 # 3. Volatility spillover network:
 network.vs(spill=vs$spill)
+```
+
+
+
+
+
