@@ -6,8 +6,8 @@ https://www.sciencedirect.com/science/article/pii/S0140988319303500?via%3Dihub
 
 This file contains a brief illustration of the code in order to implement the t-Lasso estimator, carry on the volatility spillover analysis and plot the volatility spillover network.
 
-Authors: Luca Barbaglia, Christophe Croux, Ines Wilms
-Website: https://lucabarbaglia.github.io/
+
+Author's website: https://lucabarbaglia.github.io/
 
 
 ``` r 
