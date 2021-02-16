@@ -1,0 +1,22 @@
+Package: tVARlarge
+Type: Package
+Title: Large Vector AutoRegressions with t-innovations
+Version: 1.0.0
+Authors@R: c(person("Luca", "Barbaglia", email = "luca.barbaglia@ec.europa.eu", role = c("cre", "aut")))
+Maintainer: Luca Barbaglia <luca.barbaglia@ec.europa.eu>
+Description: Large Vector AutoRegressions with t-innovations as in Barbaglia et al. (2020)
+Depends: R (>= 3.5.0)
+Imports: 
+    glasso,
+    grplasso,
+    glmnet,
+    zoo,
+    ggraph,
+    stats,
+    scales,
+    igraph,
+    ggplot2
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.1

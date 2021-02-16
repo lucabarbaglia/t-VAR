@@ -1,0 +1,90 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-"
+)
+```
+
+
+The `tVARlarge` package allows R users to estimate the penalized Vector AutoRegression model with *t*-distributed innovations (*t*-VAR) proposed in [Barbaglia et al. (2020)](https://www.sciencedirect.com/science/article/pii/S0140988319303500?via%3Dihub). The package allows to compute the resulting volatility spillovers and visualize them via networks.
+
+
+## Installation
+
+You can install `tVARlarge` from GitHub as follows:
+
+```{r gh-installation, eval = FALSE}
+install.packages("devtools")
+devtools::install_github("lucabarbaglia/t-VAR")
+```
+
+
+## Fit a t-VAR with estimated of the degrees of freedom
+
+Fit a penalized `t-VAR` of order P=2 on  the `RV` data set containing the log-transformed realized volatilities for J=5 stocks and N=500 observations.
+
+```{r test tVAR}
+library(tVARlarge)
+data(RV)
+DATA <- as.matrix(RV)
+fit <- Large.tVAR(Data=DATA, P=2, lambda1_OPT = 5, gamma1_OPT = 0.2) 
+str(fit, max.level = 1)
+```
+
+The output of the  `Large.tVAR` function is a list containing, among other ones, the following objects:
+
+- Beta_arr: a JxJxP array containing the estimated autoregressive coefficients;
+
+- Omega_new: a JxJ matrix containing the estimated variance-covariance matrix;
+
+- nu_new:  estimated degrees-of-freedom of the multivaraite t-distribution of the VAR innovations.
+
+- lambda1_opt: selected value of the regularization parameter on the autoregressive coefficients;
+
+- gamma1_opt: selected value of the regularization parameter on the variance-covariance matrix
+
+
+
+If you do not wish to specify the magnitude of the penalization, you select it via BIC by setting the paramaters `lambda1_min, lambda1_max, lambda1_steps`. 
+If you do not wish to estimate the degrees-of-freedom of the multivariate *t* distribution of the VAR innovations, you can use the `EM_VAR` function.
+
+
+## Volatilty spillover networks
+
+Build the volatility spillovers from the *t*-VAR estimation.
+
+```{r spills}
+# Volatility Spillovers:
+vs <- Spillovers(fit = fit)
+vs$spill_index 		# volatility spillover index
+
+# volatility spillover matrix
+spills <- vs$spill
+colnames(spills) <- rownames(spills) <- colnames(RV)
+round(spills,2)
+```
+
+
+Plot the network of volatility spillovers.
+
+```{r network}
+# Volatility spillover network:
+network.vs(spill=round(spills))
+
+```
+
+
+
+## References:
+
+* Barbaglia, L., Croux, C., & Wilms, I. (2020). Volatility spillovers in commodity markets: A large t-vector autoregressive approach. Energy Economics, 85, 104555.
+
+
+

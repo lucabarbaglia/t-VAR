@@ -1,0 +1,100 @@
+.idea/
+*.html
+*.log
+*.pdf
+*.png
+*.jpg
+
+#
+# Project specific excludes
+#
+/Covid19_Sentiment_files/
+/Covid19_Sentiment_files/*
+/BackUp/
+/BackUp/*
+/Functions/BackUp/*
+/INPUT/
+/INPUT/*
+/db/
+/db/*
+/ECB_DATA/
+/ ECB_DATA /*
+/Elisa/
+/Elisa/*
+/StoredValues/
+/StoredValues/*
+/geodata/
+/geodata/*
+/h2ologs/
+/h2ologs/*
+/Functions/h2ologs/*
+/logs/
+/logs/*
+/Functions/logs/*
+/spark-warehouse/
+/spark-warehouse/*
+
+
+./.settings/
+
+*.Rhistory
+*.Rproj
+*.RData
+
+tomcat
+
+#
+# Default excludes
+#
+
+# Binaries
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.war
+*.ear
+*.sar
+*.class
+*.csv
+*.tgz
+
+# Maven 
+target/
+
+# IntelliJ project files 
+*.iml
+*.iws
+*.ipr
+.idea/
+
+# eclipse project file
+.settings/
+.classpath
+.project
+
+# NetBeans specific
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+
+
+# OS
+.DS_Store
+
+# Misc
+*.swp
+release.properties
+pom.xml.releaseBackup
+pom.xml.tag
+
+
+.Rproj.user

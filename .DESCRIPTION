@@ -1,0 +1,15 @@
+Package: MultiHorizonSPA
+Type: Package
+Title: Multi Horizon Superior Predictive Ability
+Version: 1.0.0
+Authors@R: c(person("Luca", "Barbaglia", email = "luca.barbaglia@ec.europa.eu", role = c("cre", "aut")))
+Maintainer: Luca Barbaglia <luca.barbaglia@ec.europa.eu>
+  Description:  Multi Horizon Superior Predictive Ability by Quaedvlieg (2021)
+Depends: R (>= 3.5.0)
+Imports: 
+  matlab,
+stats
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.1
