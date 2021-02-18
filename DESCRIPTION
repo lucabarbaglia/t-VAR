@@ -1,6 +1,6 @@
-Package: tVARlarge
+Package: tVAR
 Type: Package
-Title: Large Vector AutoRegressions with t-innovations
+Title: Penalized Vector AutoRegressions with t-innovations
 Version: 1.0.0
 Authors@R: c(person("Luca", "Barbaglia", email = "luca.barbaglia@ec.europa.eu", role = c("cre", "aut")))
 Maintainer: Luca Barbaglia <luca.barbaglia@ec.europa.eu>

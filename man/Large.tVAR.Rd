@@ -67,6 +67,7 @@ A list containing:
 \item{"innov"}{a (N-P)xJ containing the estimated VAR residuals.}
 \item{"Omega_new"}{a JxJ matrix containing the estimated Omega.}
 \item{"tau_new"}{a vector of length N-P containing the estimated gamma variable tau.}
+\item{"nu_new"}{estimated degrees-of-freedom of the multivaraite t-distribution of the VAR innovations.} 
 \item{"Obj_ECM"}{objective function.}
 \item{"iter_ECM"}{number of iterations of the ECM algorithm.}
 \item{"iter_vec"}{number of iteration of the Gaussian Lasso algorithm for each ECM iteration.}

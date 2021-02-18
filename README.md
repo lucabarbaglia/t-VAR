@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-The `tVARlarge` package allows R users to estimate the penalized Vector
+The `tVAR` package allows R users to estimate the penalized Vector
 AutoRegression model with *t*-distributed innovations (*t*-VAR) proposed
 in [Barbaglia et
 al. (2020)](https://www.sciencedirect.com/science/article/pii/S0140988319303500?via%3Dihub).
@@ -10,7 +10,7 @@ visualize them via networks.
 
 ## Installation
 
-You can install `tVARlarge` from GitHub as follows:
+You can install `tVAR` from GitHub as follows:
 
 ``` r
 install.packages("devtools")
@@ -24,7 +24,7 @@ log-transformed realized volatilities for J=5 stocks and N=500
 observations.
 
 ``` r
-library(tVARlarge)
+library(tVAR)
 data(RV)
 DATA <- as.matrix(RV)
 fit <- Large.tVAR(Data=DATA, P=2, lambda1_OPT = 5, gamma1_OPT = 0.2) 

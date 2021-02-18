@@ -4,27 +4,18 @@
 \alias{network.vs}
 \title{network.vs}
 \usage{
-network.vs(
-  beta,
-  main.label = NULL,
-  names = NULL,
-  ww = 5,
-  legend = NULL,
-  colour = "#619CFF"
-)
+network.vs(spill, main.label = NULL, names = NULL, ww = 5, colour = "#619CFF")
 }
 \arguments{
+\item{spill}{matrix of spillover effects. Dimension JxJ, where J is the number of time series.}
+
 \item{main.label}{network names.  Default NULL.}
 
 \item{names}{node names. Default is the column names of beta.}
 
 \item{ww}{weight of the thickness of the arrows}
 
-\item{legend}{legend title. If NULL (default) no legend.}
-
 \item{colour}{arrows' colour. Default "#619CFF".}
-
-\item{beta.arr}{array of effects. Dimension JxJ, where J is the number of time series.}
 }
 \value{
 a network of spillover effects consisting of J nodes
